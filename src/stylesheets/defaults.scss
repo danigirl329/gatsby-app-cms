@@ -1,0 +1,81 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: var(--charcoal);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 { 
+  font-size: 1.5rem;
+}
+
+.dark-background {
+  background-color: var(--charcoal);
+  color: var(--gray);
+}
+
+.light-background {
+  background-color: var(--gray);
+  color: var(--charcoal);
+}
+
+@mixin button {
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.button-light {
+  @include button;
+  // background: transparent;
+  background: linear-gradient(to left, transparent 50%, var(--charcoal) 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition: all .5s ease;
+  border: 3px solid var(--charcoal);
+  color: var(--charcoal);
+  &:hover {
+    cursor: pointer;
+    background-position:left bottom;
+    transition: all .5s ease;
+    color: white;
+    border: 3px solid var(--charcoal);
+  }
+}
+
+.button-dark {
+  @include button;
+  background: var(--charcoal);
+  color: #fff;
+  border: 3px solid #fff;
+  &:hover {
+    cursor: pointer;
+    background: #fff;
+    border: 3px solid var(--charcoal);
+    color: var(--charcoal);
+  }
+}
+
+nav {
+  a {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    &:hover {
+      transition: .3s ease-in-out;
+      border-bottom: 3px solid #fff;
+      padding-bottom: 5px;
+    }
+  }
+}
