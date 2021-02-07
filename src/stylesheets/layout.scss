@@ -1,41 +1,40 @@
 main {
   nav {
+    a {
+      font-size: 1.2rem;
+      color: #fff;
+      text-decoration: none;
+      transition: .3s ease-in-out;
+      &:hover {
+        transition: .3s ease-in-out;
+        border-bottom: 3px solid #fff;
+        padding-bottom: 5px;
+      }
+    .logo {
+      width: 50px;
+      border: none;
+      &:hover {
+        border: none;
+      }
+    }
+  }
     ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
       li {
         padding: 1rem;
       }
     }
   }
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: repeat(4, 1fr);
-    height: 100vh;
-    background: url(../images/home_background.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    .intro {
-      background-color: rgb(255, 255, 255, 0.5);
-      padding: 1rem;
-      margin: 1rem;
-      grid-column: 3/4;
-      grid-row: 3;
-      h1, h2 {
-        color: var(--charcoal);
-      }
-    }
+
+  .centered-container {
+    display: block;
+    width: calc(100vw - 50%);
+    margin: 1rem auto;
   }
-  .about {
-    height: 25vh;
-    text-align: center;
-    padding: 2rem;
-  }
-  .cta {
-    height: 50vh;
-  }
+  
   .footer {
     height: 10vh;
   }

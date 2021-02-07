@@ -1,37 +1,10 @@
 import * as React from "react"
-
-const nav = [
-  {
-    text: "About",
-    url: "/about"
-  },
-  {
-    text: "Shop",
-    url: "/shop"
-  },
-  {
-    text: "Contact",
-    url: "/contact"
-  },
-  {
-    text: "Account",
-    url: "/account"
-  },
-]
+import "../stylesheets/homepage.scss"
+import Layout from "../components/layout"
 
 const IndexPage = () => {
   return (
-    <main>
-      <title>Cafe Shipt</title>
-      <nav className="dark-background">
-        <ul>
-        {nav.map(link => (
-          <li>
-            <a href={link.url}>{link.text}</a>
-          </li>
-        ))}
-        </ul>
-      </nav>
+    <Layout>
       <section className="hero">
         <article className="intro">
           <h1>Coffee. Your way.</h1>
@@ -43,16 +16,7 @@ const IndexPage = () => {
         <h4>Your schedule is important to you and you are important to us.</h4>
         <button className="button-light">Ship Now</button>
       </section>
-      <section className="footer dark-background">
-        <article className="social-links">
-          <ul>
-            <li>fb</li>
-            <li>ig</li>
-            <li>tw</li>
-          </ul>
-        </article>
-      </section>
-    </main>
+    </Layout>
   )
 }
 
