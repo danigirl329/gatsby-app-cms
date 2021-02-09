@@ -55,7 +55,7 @@ export default class ContactPage extends React.Component {
             value={this.state.comments}
             onChange = {this.handleInputChange}
             ></textarea>
-            <button className="button-dark" type="submit">Submit</button>
+            <button className="button" type="submit">Submit</button>
           </form>
         </div>
       </Layout>
